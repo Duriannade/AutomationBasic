@@ -17,6 +17,7 @@ public class GoogleSearchTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://google.com");
+        System.out.println("Open browser");
     }
 
     @Test
@@ -29,6 +30,7 @@ public class GoogleSearchTest {
 
     @AfterTest
     public void logOut(){
+        System.out.println("Close browser");
         driver.quit();
     }
 
